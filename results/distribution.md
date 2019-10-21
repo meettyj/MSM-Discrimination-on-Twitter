@@ -15,7 +15,7 @@
 </p>
 
 
-# Discrimination variables
+# Discrimination - grid cell variables
 
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution_discrimination_grid_1.png" />
@@ -25,7 +25,15 @@
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution_discrimination_grid_2.png" />
 </p>
 
+# Discrimination - AWM variables
 
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution_discrimination_AWM_1.png" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution_discrimination_AWM_2.png" />
+</p>
 
 
 
