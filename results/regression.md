@@ -1,48 +1,53 @@
-# Negative Binomial
-## Anal Intercourse (AI)
-### AI_Total
+# Anal Intercourse (AI)
+## AI_Total
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_AI_Total.png" />
 </p>
-### AI_Condom
+
+## AI_Condom
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_AI_Condom.png" />
 </p>
-### AI_Condomless
+
+## AI_Condomless
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_AI_Condomless.png" />
 </p>
 
-## Insertive Anal Intercourse (IAI)
-### IAI_Total
+# Insertive Anal Intercourse (IAI)
+## IAI_Total
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_IAI_Total.png" />
 </p>
-### IAI_Condom
+
+## IAI_Condom
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_IAI_Condom.png" />
 </p>
-### IAI_Condomless
+
+## IAI_Condomless
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_IAI_Condomless.png" />
 </p>
 
-## Receptive Anal Intercourse (RAI)
-### RAI_Total
+# Receptive Anal Intercourse (RAI)
+## RAI_Total
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_RAI_Total.png" />
 </p>
-### RAI_Condom
+
+## RAI_Condom
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_RAI_Condom.png" />
 </p>
-### RAI_Condomless
+
+## RAI_Condomless
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_RAI_Condomless.png" />
 </p>
 
-## Others
-### drug_use
+# Others
+## drug_use
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/Negative Binomial/NB_drug_use.png" />
 </p>
