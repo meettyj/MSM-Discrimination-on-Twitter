@@ -1,5 +1,7 @@
 require(MASS)
-install.packages("MASS")
+require(xlsx)
+# install.packages("MASS")
+# install.packages("xlsx")
 
 # Set the working environment here
 setwd("C:/Users/eddie/Desktop/Prof. Rumi Chunara/2019_Fall/msm-discrimination-on-twitter/")
@@ -7,10 +9,11 @@ setwd("C:/Users/eddie/Desktop/Prof. Rumi Chunara/2019_Fall/msm-discrimination-on
 survey_data_path <- "data/"
 survey_data_file <- "P18_Final_Data_07162019.csv"
 
-survey_data <- read.csv(paste(survey_data_path,survey_data_file,sep=""),header=TRUE)
-survey_data_covariates <- survey_data[c("a_pid","agef1y","racefa1_b","eduf3","eduf1","bornusf1_b","income_su")]
 
-survey_data_outcomes <- survey_data[c("AI_Total", "AI_Condom", "AI_Condomless")]
+survey_data <- read.csv(paste(survey_data_path,survey_data_file,sep=""),header=TRUE)
+# survey_data_covariates <- survey_data[c("a_pid","agef1y","racefa1_b","eduf3","eduf1","bornusf1_b","income_su")]
+# survey_data_outcomes <- survey_data[c("AI_Total", "AI_Condom", "AI_Condomless")]
+
 
 
 # ---- Possion ----
