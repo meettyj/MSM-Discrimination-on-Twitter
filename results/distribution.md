@@ -19,6 +19,10 @@
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_drug_use.png" />
 </p>
 
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf6.png" />
+</p>
+
 # Discrimination - grid cell variables
 
 <p align="center">
