@@ -4,32 +4,32 @@
 # Poisson Regression
 ## general
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/possion_general.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/poisson_general.png" />
 </p>
 
 ## AWM_SSSOM_Rac
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/possion_AWM_SSSOM_Rac.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/poisson_AWM_SSSOM_Rac.png" />
 </p>
 
 ## AWM_SSSOM_Hom
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/possion_AWM_SSSOM_Hom.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/poisson_AWM_SSSOM_Hom.png" />
 </p>
 
 ## AWM_Rac_tweets
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/possion_AWM_Rac_tweets.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/poisson_AWM_Rac_tweets.png" />
 </p>
 
 ## AWM_Zip_Rac
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/possion_AWM_Zip_Rac.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/poisson_AWM_Zip_Rac.png" />
 </p>
 
 ## AWM_Zip_Hom
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/possion_AWM_Zip_Hom.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/alcohf6/poisson_AWM_Zip_Hom.png" />
 </p>
 
 
