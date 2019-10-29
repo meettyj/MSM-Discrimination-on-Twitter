@@ -1,7 +1,6 @@
 
 # drug_use - Logistic Regression
 
-# Anal Intercourse (AI)
 ## general
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/general.png" />
