@@ -7,29 +7,29 @@
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/general.png" />
 </p>
 
-## SSSOM_Rac_grid
+## AWM_SSSOM_Rac
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/SSSOM_Rac_grid.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_SSSOM_Rac.png" />
 </p>
 
-## SSSOM_Hom_grid
+## AWM_SSSOM_Hom
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/SSSOM_Hom_grid.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_SSSOM_Hom.png" />
 </p>
 
-## Rac_tweets_grid
+## AWM_Rac_tweets
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/Rac_tweets_grid.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_Rac_tweets.png" />
 </p>
 
-## Zip_Rac_grid
+## AWM_Zip_Rac
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/Zip_Rac_grid.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_Zip_Rac.png" />
 </p>
 
-## Zip_Hom_grid
+## AWM_Zip_Hom
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/Zip_Hom_grid.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_Zip_Hom.png" />
 </p>
 
 
