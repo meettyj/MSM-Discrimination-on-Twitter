@@ -45,6 +45,15 @@
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf4.png" />
 </p>
 
+### alcohf1
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf1.png" />
+</p>
+
+### alcohf7
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf7.png" />
+</p>
 
 
 # Discrimination - grid cell variables
