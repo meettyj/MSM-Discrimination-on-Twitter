@@ -15,13 +15,37 @@
 </p>
 
 ## Others
+### drug_use
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_drug_use.png" />
 </p>
 
+### alcohf6
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf6.png" />
 </p>
+
+### alcohf9
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf9.png" />
+</p>
+
+### drugf25c
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_drugf25c.png" />
+</p>
+
+### drugf28c
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_drugf28c.png" />
+</p>
+
+### alcohf4
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_alcohf4.png" />
+</p>
+
+
 
 # Discrimination - grid cell variables
 

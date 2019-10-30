@@ -87,6 +87,10 @@ merged_survey_discrimination_data$income_low
 merged_survey_discrimination_data$income_medium
 merged_survey_discrimination_data$income_high
 
+# remove NA value in alcohf6
+merged_survey_discrimination_data$drug_use
+merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$drug_use !="NA"), ]
+merged_survey_discrimination_data$drug_use
 
 # ---- Logistic Regression ----
 # Drug use
