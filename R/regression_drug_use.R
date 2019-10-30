@@ -38,9 +38,9 @@ merged_survey_discrimination_data['agef1y']
 merged_survey_discrimination_data$race_hispanic <- merged_survey_discrimination_data$racefa1_b
 merged_survey_discrimination_data$race_black <- merged_survey_discrimination_data$racefa1_b
 merged_survey_discrimination_data$race_asian <- merged_survey_discrimination_data$racefa1_b
-merged_survey_discrimination_data$race_mixed <- merged_survey_discrimination_data$racefa1_b
-merged_survey_discrimination_data$race_other <- merged_survey_discrimination_data$racefa1_b
-merged_survey_discrimination_data$race_white <- merged_survey_discrimination_data$racefa1_b
+merged_survey_discrimination_data$race_mixed_or_other <- merged_survey_discrimination_data$racefa1_b
+# merged_survey_discrimination_data$race_other <- merged_survey_discrimination_data$racefa1_b
+# merged_survey_discrimination_data$race_white <- merged_survey_discrimination_data$racefa1_b
 
 merged_survey_discrimination_data$race_hispanic[merged_survey_discrimination_data$race_hispanic != 1]<-0
 
@@ -50,19 +50,19 @@ merged_survey_discrimination_data$race_black[merged_survey_discrimination_data$r
 merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$race_asian != 3]<-0
 merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$race_asian == 3]<-1
 
-merged_survey_discrimination_data$race_mixed[merged_survey_discrimination_data$race_mixed != 4]<-0
-merged_survey_discrimination_data$race_mixed[merged_survey_discrimination_data$race_mixed == 4]<-1
+merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other != 4 & merged_survey_discrimination_data$race_mixed_or_other != 5]<-0
+merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other == 4|merged_survey_discrimination_data$race_mixed_or_other == 5]<-1
 
 # merged_survey_discrimination_data$race_other[merged_survey_discrimination_data$race_other != 5]<-0
 # merged_survey_discrimination_data$race_other[merged_survey_discrimination_data$race_other == 5]<-1
+# merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white != 6]<-0
+# merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white == 6]<-1
 
-merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white != 6]<-0
-merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white == 6]<-1
 
 # merged_survey_discrimination_data$race_hispanic
 # merged_survey_discrimination_data$race_black
 # merged_survey_discrimination_data$race_asian
-# merged_survey_discrimination_data$race_mixed
+# merged_survey_discrimination_data$race_mixed_or_other
 # merged_survey_discrimination_data$race_other
 # merged_survey_discrimination_data$race_white
 
@@ -87,30 +87,30 @@ merged_survey_discrimination_data$income_low
 merged_survey_discrimination_data$income_medium
 merged_survey_discrimination_data$income_high
 
-# remove NA value in alcohf6
+# remove NA value in drug_use
 merged_survey_discrimination_data$drug_use
 merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$drug_use !="NA"), ]
 merged_survey_discrimination_data$drug_use
 
 # ---- Logistic Regression ----
 # Drug use
-glm_LR_drug_use <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed+race_white+income_high+income_medium, family="binomial",data=merged_survey_discrimination_data)
+glm_LR_drug_use <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, family="binomial",data=merged_survey_discrimination_data)
 summary(glm_LR_drug_use)
 
 # discrimination variables
-glm_LR_drug_use_AWM_Rac_tweets <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed+race_white+income_high+income_medium+AWM_Rac_tweets, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use_AWM_Rac_tweets)
+glm_LR_drug_use_AWM_Rac_grid <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, family="binomial",data=merged_survey_discrimination_data)
+summary(glm_LR_drug_use_AWM_Rac_grid)
 
-glm_LR_drug_use_AWM_SSSOM_Hom <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed+race_white+income_high+income_medium+AWM_SSSOM_Hom, family="binomial",data=merged_survey_discrimination_data)
+glm_LR_drug_use_AWM_SSSOM_Hom <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, family="binomial",data=merged_survey_discrimination_data)
 summary(glm_LR_drug_use_AWM_SSSOM_Hom)
 
-glm_LR_drug_use_AWM_SSSOM_Rac <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed+race_white+income_high+income_medium+AWM_SSSOM_Rac, family="binomial",data=merged_survey_discrimination_data)
+glm_LR_drug_use_AWM_SSSOM_Rac <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, family="binomial",data=merged_survey_discrimination_data)
 summary(glm_LR_drug_use_AWM_SSSOM_Rac)
 
-glm_LR_drug_use_AWM_Zip_Hom <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed+race_white+income_high+income_medium+AWM_Zip_Hom, family="binomial",data=merged_survey_discrimination_data)
+glm_LR_drug_use_AWM_Zip_Hom <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, family="binomial",data=merged_survey_discrimination_data)
 summary(glm_LR_drug_use_AWM_Zip_Hom)
 
-glm_LR_drug_use_AWM_Zip_Rac <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed+race_white+income_high+income_medium+AWM_Zip_Rac, family="binomial",data=merged_survey_discrimination_data)
+glm_LR_drug_use_AWM_Zip_Rac <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, family="binomial",data=merged_survey_discrimination_data)
 summary(glm_LR_drug_use_AWM_Zip_Rac)
 
 

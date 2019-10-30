@@ -50,19 +50,6 @@ merged_survey_discrimination_data$race_black[merged_survey_discrimination_data$r
 merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$race_asian != 3]<-0
 merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$race_asian == 3]<-1
 
-
-merged_survey_discrimination_data$race_mixed_or_other
-test = merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other != 4&merged_survey_discrimination_data$race_mixed_or_other != 5]
-sum(test)
-
-
-
-
-
-
-
-
-
 merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other != 4 & merged_survey_discrimination_data$race_mixed_or_other != 5]<-0
 merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other == 4|merged_survey_discrimination_data$race_mixed_or_other == 5]<-1
 
@@ -101,7 +88,6 @@ merged_survey_discrimination_data$income_medium
 merged_survey_discrimination_data$income_high
 
 
-merged_survey_discrimination_data
 # remove NA value in alcohf6
 merged_survey_discrimination_data$alcohf6
 merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$alcohf6 !="NA"), ]

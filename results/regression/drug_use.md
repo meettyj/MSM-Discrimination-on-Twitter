@@ -16,9 +16,9 @@
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_SSSOM_Hom.png" />
 </p>
 
-## AWM_Rac_tweets
+## AWM_Rac_grid
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_Rac_tweets.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/drug_use/AWM_Rac_grid.png" />
 </p>
 
 ## AWM_Zip_Rac
