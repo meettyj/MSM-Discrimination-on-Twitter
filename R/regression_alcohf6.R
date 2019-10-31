@@ -93,6 +93,11 @@ merged_survey_discrimination_data$alcohf6
 merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$alcohf6 !="NA"), ]
 merged_survey_discrimination_data$alcohf6
 
+# remove NA value in AWM_Rac_grid
+merged_survey_discrimination_data$AWM_Rac_grid
+merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$AWM_Rac_grid !="NA"), ]
+merged_survey_discrimination_data$AWM_Rac_grid
+
 # ---- Poisson Regression ----
 glm_poisson_alcohf6 <- glm(alcohf6 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, family="poisson",data=merged_survey_discrimination_data)
 summary(glm_poisson_alcohf6)

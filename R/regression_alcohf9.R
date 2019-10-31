@@ -1,7 +1,9 @@
 require(MASS)
 require(xlsx)
+require(pscl)
 # install.packages("MASS")
 # install.packages("xlsx")
+# install.packages("pscl")
 
 # Set the working environment here
 setwd("C:/Users/eddie/Desktop/Prof. Rumi Chunara/2019_Fall/msm-discrimination-on-twitter/")
@@ -58,7 +60,8 @@ merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discriminati
 # merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white != 6]<-0
 # merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white == 6]<-1
 
-
+# merged_survey_discrimination_data$agef1y
+# merged_survey_discrimination_data$eduf1
 # merged_survey_discrimination_data$race_hispanic
 # merged_survey_discrimination_data$race_black
 # merged_survey_discrimination_data$race_asian
@@ -87,36 +90,67 @@ merged_survey_discrimination_data$income_low
 merged_survey_discrimination_data$income_medium
 merged_survey_discrimination_data$income_high
 
-# remove NA value in drug_use
-merged_survey_discrimination_data$drug_use
-merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$drug_use !="NA"), ]
-merged_survey_discrimination_data$drug_use
+
+# remove NA value in alcohf9
+merged_survey_discrimination_data$alcohf9
+merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$alcohf9 !="NA"), ]
+merged_survey_discrimination_data$alcohf9
 
 # remove NA value in AWM_Rac_grid
 merged_survey_discrimination_data$AWM_Rac_grid
 merged_survey_discrimination_data <- merged_survey_discrimination_data[which(merged_survey_discrimination_data$AWM_Rac_grid !="NA"), ]
 merged_survey_discrimination_data$AWM_Rac_grid
 
-# ---- Logistic Regression ----
-# Drug use
-glm_LR_drug_use <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use)
+
+# merged_survey_discrimination_data$AWM_SSSOM_Hom
+# merged_survey_discrimination_data$race_asian
+
+
+# ---- zero inflated poisson ----
+zeroinfl_ZIP_alcohf9 <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_alcohf9)
 
 # discrimination variables
-glm_LR_drug_use_AWM_Rac_grid <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use_AWM_Rac_grid)
+zeroinfl_ZIP_alcohf9_AWM_Rac_grid <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_alcohf9_AWM_Rac_grid)
 
-glm_LR_drug_use_AWM_SSSOM_Hom <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use_AWM_SSSOM_Hom)
+zeroinfl_ZIP_alcohf9_AWM_SSSOM_Hom <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_alcohf9_AWM_SSSOM_Hom)
 
-glm_LR_drug_use_AWM_SSSOM_Rac <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use_AWM_SSSOM_Rac)
+zeroinfl_ZIP_alcohf9_AWM_SSSOM_Rac <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_alcohf9_AWM_SSSOM_Rac)
 
-glm_LR_drug_use_AWM_Zip_Hom <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use_AWM_Zip_Hom)
+zeroinfl_ZIP_alcohf9_AWM_Zip_Hom <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_alcohf9_AWM_Zip_Hom)
 
-glm_LR_drug_use_AWM_Zip_Rac <- glm(drug_use ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, family="binomial",data=merged_survey_discrimination_data)
-summary(glm_LR_drug_use_AWM_Zip_Rac)
+zeroinfl_ZIP_alcohf9_AWM_Zip_Rac <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_alcohf9_AWM_Zip_Rac)
+
+
+
+# ---- zero inflated negative binomial ----
+zeroinfl_ZINB_alcohf9 <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, dist = "negbin", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZINB_alcohf9)
+
+# discrimination variables
+zeroinfl_ZINB_alcohf9_AWM_Rac_grid <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, dist = "negbin",data=merged_survey_discrimination_data)
+summary(zeroinfl_ZINB_alcohf9_AWM_Rac_grid)
+
+zeroinfl_ZINB_alcohf9_AWM_SSSOM_Hom <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, dist = "negbin",data=merged_survey_discrimination_data)
+summary(zeroinfl_ZINB_alcohf9_AWM_SSSOM_Hom)
+
+zeroinfl_ZINB_alcohf9_AWM_SSSOM_Rac <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, dist = "negbin",data=merged_survey_discrimination_data)
+summary(zeroinfl_ZINB_alcohf9_AWM_SSSOM_Rac)
+
+zeroinfl_ZINB_alcohf9_AWM_Zip_Hom <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, dist = "negbin",data=merged_survey_discrimination_data)
+summary(zeroinfl_ZINB_alcohf9_AWM_Zip_Hom)
+
+zeroinfl_ZINB_alcohf9_AWM_Zip_Rac <- zeroinfl(alcohf9 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, dist = "negbin",data=merged_survey_discrimination_data)
+summary(zeroinfl_ZINB_alcohf9_AWM_Zip_Rac)
+
+
+
+
 
 
 
