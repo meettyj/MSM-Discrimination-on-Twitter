@@ -1,7 +1,12 @@
 # MSM survey data variables
-## Anal Intercourse (AI)
+## Anal Intercourse (AI) - Count
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_AI.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_AI_count.png" />
+</p>
+
+## Anal Intercourse (AI) - Probability density
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_AI_probability.png" />
 </p>
 
 ## Insertive Anal Intercourse (IAI)
