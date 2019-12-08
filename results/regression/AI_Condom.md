@@ -1,6 +1,13 @@
 
 # AI_Condom
 
+[Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#poisson-regression)
+[Negative Binomial Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#negative-binomial-regression)
+[Zero Inflated Poisson Regression]()
+
+[Quasi Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#quasi-poisson-regression)
+
+
 # Poisson Regression
 ## general
 <p align="center">
