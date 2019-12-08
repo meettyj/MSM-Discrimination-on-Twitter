@@ -1,5 +1,6 @@
 require(MASS)
 require(xlsx)
+require(pscl)
 # install.packages("MASS")
 # install.packages("xlsx")
 
@@ -141,6 +142,28 @@ summary(glm_nb_AI_Total_AWM_Zip_Hom)
 
 glm_nb_AI_Total_AWM_Zip_Rac <- glm.nb(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, data=merged_survey_discrimination_data)
 summary(glm_nb_AI_Total_AWM_Zip_Rac)
+
+
+
+# ---- Zero Inflated Poisson ----
+zeroinfl_ZIP_AI_Total <- zeroinfl(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_AI_Total)
+
+# discrimination variables
+zeroinfl_ZIP_AI_Total_AWM_Rac_grid <- zeroinfl(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_AI_Total_AWM_Rac_grid)
+
+zeroinfl_ZIP_AI_Total_AWM_SSSOM_Hom <- zeroinfl(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_AI_Total_AWM_SSSOM_Hom)
+
+zeroinfl_ZIP_AI_Total_AWM_SSSOM_Rac <- zeroinfl(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_AI_Total_AWM_SSSOM_Rac)
+
+zeroinfl_ZIP_AI_Total_AWM_Zip_Hom <- zeroinfl(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_AI_Total_AWM_Zip_Hom)
+
+zeroinfl_ZIP_AI_Total_AWM_Zip_Rac <- zeroinfl(AI_Total ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(zeroinfl_ZIP_AI_Total_AWM_Zip_Rac)
 
 
 
