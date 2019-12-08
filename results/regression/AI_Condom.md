@@ -1,11 +1,10 @@
 
 # AI_Condom
 
-[Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#poisson-regression)
-[Negative Binomial Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#negative-binomial-regression)
-[Zero Inflated Poisson Regression]()
-
-[Quasi Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#quasi-poisson-regression)
+- [Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#poisson-regression)
+- [Negative Binomial Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#negative-binomial-regression)
+- [Zero Inflated Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#zero-inflated-poisson-regression)
+- [Quasi Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/AI_Condom.md#quasi-poisson-regression)
 
 
 # Poisson Regression
@@ -71,6 +70,9 @@
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/AI_Condom/NB_AWM_Zip_Hom.png" />
 </p>
+
+# Zero Inflated Poisson Regression
+
 
 
 
