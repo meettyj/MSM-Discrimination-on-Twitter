@@ -151,8 +151,47 @@ summary(zeroinfl_ZINB_alcohf7_AWM_Zip_Rac)
 
 
 
+# ---- Negative Binomial ----
+glm_nb_alcohf7 <- glm.nb(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, data=merged_survey_discrimination_data)
+summary(glm_nb_alcohf7)
+
+# discrimination variables
+glm_nb_alcohf7_AWM_Rac_grid <- glm.nb(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, data=merged_survey_discrimination_data)
+summary(glm_nb_alcohf7_AWM_Rac_grid)
+
+glm_nb_alcohf7_AWM_SSSOM_Hom <- glm.nb(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, data=merged_survey_discrimination_data)
+summary(glm_nb_alcohf7_AWM_SSSOM_Hom)
+
+glm_nb_alcohf7_AWM_SSSOM_Rac <- glm.nb(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, data=merged_survey_discrimination_data)
+summary(glm_nb_alcohf7_AWM_SSSOM_Rac)
+
+glm_nb_alcohf7_AWM_Zip_Hom <- glm.nb(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, data=merged_survey_discrimination_data)
+summary(glm_nb_alcohf7_AWM_Zip_Hom)
+
+glm_nb_alcohf7_AWM_Zip_Rac <- glm.nb(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, data=merged_survey_discrimination_data)
+summary(glm_nb_alcohf7_AWM_Zip_Rac)
 
 
+
+# ---- Quasi Poisson Regression ----
+glm_quasi_poisson_alcohf7 <- glm(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium, family=quasipoisson(link="log"),data=merged_survey_discrimination_data)
+summary(glm_quasi_poisson_alcohf7)
+
+# discrimination variables
+glm_quasi_poisson_alcohf7_AWM_Rac_grid <- glm(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, family=quasipoisson(link="log"),data=merged_survey_discrimination_data)
+summary(glm_quasi_poisson_alcohf7_AWM_Rac_grid)
+
+glm_quasi_poisson_alcohf7_AWM_SSSOM_Hom <- glm(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, family=quasipoisson(link="log"),data=merged_survey_discrimination_data)
+summary(glm_quasi_poisson_alcohf7_AWM_SSSOM_Hom)
+
+glm_quasi_poisson_alcohf7_AWM_SSSOM_Rac <- glm(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, family=quasipoisson(link="log"),data=merged_survey_discrimination_data)
+summary(glm_quasi_poisson_alcohf7_AWM_SSSOM_Rac)
+
+glm_quasi_poisson_alcohf7_AWM_Zip_Hom <- glm(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, family=quasipoisson(link="log"),data=merged_survey_discrimination_data)
+summary(glm_quasi_poisson_alcohf7_AWM_Zip_Hom)
+
+glm_quasi_poisson_alcohf7_AWM_Zip_Rac <- glm(alcohf7 ~ agef1y+eduf1+race_hispanic+race_black+race_asian+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, family=quasipoisson(link="log"),data=merged_survey_discrimination_data)
+summary(glm_quasi_poisson_alcohf7_AWM_Zip_Rac)
 
 
 
