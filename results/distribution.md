@@ -1,9 +1,21 @@
-- MSM survey data variables
-  - [Anal Intercourse](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#anal-intercourse)
-
-- Others
+- **MSM survey data variables**
+  - [Anal Intercourse (AI)](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#anal-intercourse-ai)
+  - [Insertive Anal Intercourse (IAI)](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#insertive-anal-intercourse-iai)
+  - [Receptive Anal Intercourse (RAI)](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#receptive-anal-intercourse-rai)
+- **Others**
   - [drug_use](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#drug_use)
-
+  - [alcohf7](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf7)
+  - [alcohf6](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf6)
+  - [alcohf9](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf9)
+  - [drugf25c](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#drugf25c)
+  - [drugf28c](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#drugf28c)
+  - [alcohf4](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf4)
+  - [alcohf1](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf1)
+- **Discrimination**
+  - [grid cell variables](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#discrimination-grid-cell-variables)
+  - [AWM variables](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#discrimination-awm-variables)
+  
+  
 # MSM survey data variables
 ## Anal Intercourse (AI)
 <p align="center">
