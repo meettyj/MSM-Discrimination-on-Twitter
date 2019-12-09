@@ -1,3 +1,5 @@
+
+## Table of Contents
 - **MSM survey data variables**
   - [Anal Intercourse (AI)](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#anal-intercourse-ai)
   - [Insertive Anal Intercourse (IAI)](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#insertive-anal-intercourse-iai)
@@ -12,8 +14,8 @@
   - [alcohf4](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf4)
   - [alcohf1](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#alcohf1)
 - **Discrimination**
-  - [grid cell variables](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#discrimination-grid-cell-variables)
-  - [AWM variables](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#discrimination-awm-variables)
+  - [grid cell variables](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#discrimination---grid-cell-variables)
+  - [AWM variables](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#discrimination---awm-variables)
   
   
 # MSM survey data variables
