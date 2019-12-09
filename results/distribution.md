@@ -1,23 +1,25 @@
+- MSM survey data variables
+  - [Anal Intercourse](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#anal-intercourse)
+
+- Others
+  - [drug_use](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/distribution.md#drug_use)
+
 # MSM survey data variables
-## Anal Intercourse (AI) - Count
+## Anal Intercourse (AI)
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_AI_count.png" />
 </p>
 
-## Anal Intercourse (AI) - Probability density
-<p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_AI_probability.png" />
-</p>
-
 ## Insertive Anal Intercourse (IAI)
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_IAI.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_IAI_count.png" />
 </p>
 
 ## Receptive Anal Intercourse (RAI)
 <p align="center">
-  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_RAI.png" />
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/distribution/distribution_msm_RAI_count.png" />
 </p>
+
 
 ## Others
 ### drug_use
