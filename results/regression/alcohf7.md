@@ -4,7 +4,7 @@
 - [Quasi Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/alcohf7.md#quasi-poisson-regression)
 - [Negative Binomial Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/alcohf7.md#negative-binomial-regression)
 - [Zero Inflated Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/alcohf7.md#zero-inflated-poisson-regression)
-- [Poisson Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/alcohf7.md#zero-inflated-negative-binomial-regression)
+- [Zero Inflated Negative Binomial Regression](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/alcohf7.md#zero-inflated-negative-binomial-regression)
 
 
 
