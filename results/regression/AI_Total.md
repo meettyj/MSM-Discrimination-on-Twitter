@@ -94,6 +94,11 @@
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/AI_Total/ZIP_AWM_Rac_grid.png" />
 </p>
 
+## AWM_Hom_grid
+<p align="center">
+  <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/AI_Total/ZIP_AWM_Hom_grid.png" />
+</p>
+
 ## AWM_Zip_Rac
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/regression/AI_Total/ZIP_AWM_Zip_Rac.png" />
