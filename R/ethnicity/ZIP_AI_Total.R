@@ -40,7 +40,7 @@ merged_survey_discrimination_data$race_hispanic <- merged_survey_discrimination_
 merged_survey_discrimination_data$race_black <- merged_survey_discrimination_data$racefa1_b
 merged_survey_discrimination_data$race_asian <- merged_survey_discrimination_data$racefa1_b
 merged_survey_discrimination_data$race_mixed_or_other <- merged_survey_discrimination_data$racefa1_b
-# merged_survey_discrimination_data$race_other <- merged_survey_discrimination_data$racefa1_b
+merged_survey_discrimination_data$race_white <- merged_survey_discrimination_data$racefa1_b
 # merged_survey_discrimination_data$race_asian <- merged_survey_discrimination_data$racefa1_b
 
 merged_survey_discrimination_data$race_hispanic[merged_survey_discrimination_data$race_hispanic != 1]<-0
@@ -54,19 +54,23 @@ merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$r
 merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other != 4 & merged_survey_discrimination_data$race_mixed_or_other != 5]<-0
 merged_survey_discrimination_data$race_mixed_or_other[merged_survey_discrimination_data$race_mixed_or_other == 4|merged_survey_discrimination_data$race_mixed_or_other == 5]<-1
 
+merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white != 6]<-0
+merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$race_white == 6]<-1
+
 # merged_survey_discrimination_data$race_other[merged_survey_discrimination_data$race_other != 5]<-0
 # merged_survey_discrimination_data$race_other[merged_survey_discrimination_data$race_other == 5]<-1
 # merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$race_asian != 6]<-0
 # merged_survey_discrimination_data$race_asian[merged_survey_discrimination_data$race_asian == 6]<-1
 
 
+# merged_survey_discrimination_data$racefa1_b
 # merged_survey_discrimination_data$race_hispanic
 # merged_survey_discrimination_data$race_black
 # merged_survey_discrimination_data$race_asian
 # merged_survey_discrimination_data$race_mixed_or_other
 # merged_survey_discrimination_data$race_other
 # merged_survey_discrimination_data$race_asian
-
+# merged_survey_discrimination_data$race_white
 
 # add dummy variable column for income: income_su
 merged_survey_discrimination_data$income_su
@@ -105,6 +109,30 @@ merged_survey_discrimination_data <- merged_survey_discrimination_data[which(mer
 merged_survey_discrimination_data$AWM_Hom_grid
 
 
+# ---- asian ---- Zero Inflated Poisson ----
+ZIP_AI_Total_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_asian)
+
+# discrimination variables
+ZIP_AI_Total_AWM_SSSOM_Rac_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_SSSOM_Rac_asian)
+
+ZIP_AI_Total_AWM_SSSOM_Hom_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_SSSOM_Hom_asian)
+
+ZIP_AI_Total_AWM_Rac_grid_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Rac_grid_asian)
+
+ZIP_AI_Total_AWM_Hom_grid_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Hom_grid_asian)
+
+ZIP_AI_Total_AWM_Zip_Rac_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Zip_Rac_asian)
+
+ZIP_AI_Total_AWM_Zip_Hom_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Zip_Hom_asian)
+
+
 # ---- Black ---- Zero Inflated Poisson ----
 ZIP_AI_Total_black <- zeroinfl(AI_Total ~ agef1y+eduf1+race_black+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
 summary(ZIP_AI_Total_black)
@@ -130,28 +158,28 @@ summary(ZIP_AI_Total_AWM_Zip_Hom_black)
 
 
 
-# ---- asian ---- Zero Inflated Poisson ----
-ZIP_AI_Total_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_asian)
+# ---- white ---- Zero Inflated Poisson ----
+ZIP_AI_Total_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_white)
 
 # discrimination variables
-ZIP_AI_Total_AWM_SSSOM_Rac_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_AWM_SSSOM_Rac_asian)
+ZIP_AI_Total_AWM_SSSOM_Rac_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_SSSOM_Rac_white)
 
-ZIP_AI_Total_AWM_SSSOM_Hom_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_AWM_SSSOM_Hom_asian)
+ZIP_AI_Total_AWM_SSSOM_Hom_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_SSSOM_Hom_white)
 
-ZIP_AI_Total_AWM_Rac_grid_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_AWM_Rac_grid_asian)
+ZIP_AI_Total_AWM_Rac_grid_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Rac_grid_white)
 
-ZIP_AI_Total_AWM_Hom_grid_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_AWM_Hom_grid_asian)
+ZIP_AI_Total_AWM_Hom_grid_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Hom_grid_white)
 
-ZIP_AI_Total_AWM_Zip_Rac_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_AWM_Zip_Rac_asian)
+ZIP_AI_Total_AWM_Zip_Rac_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Zip_Rac_white)
 
-ZIP_AI_Total_AWM_Zip_Hom_asian <- zeroinfl(AI_Total ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
-summary(ZIP_AI_Total_AWM_Zip_Hom_asian)
+ZIP_AI_Total_AWM_Zip_Hom_white <- zeroinfl(AI_Total ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+summary(ZIP_AI_Total_AWM_Zip_Hom_white)
 
 
 # ---- hispanic ---- Zero Inflated Poisson ----
