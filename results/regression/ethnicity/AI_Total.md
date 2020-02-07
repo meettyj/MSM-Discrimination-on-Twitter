@@ -1,9 +1,9 @@
 # Ethnicity: AI_Total
 
-- [1. Black](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#1.-black)
-- [2. Asian](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#asian)
-- [3. Hispanic](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#hispanic)
-- [4. Mixed or Other](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#mixed-or-other)
+- [1. Black](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#1-black)
+- [2. Asian](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#2-asian)
+- [3. Hispanic](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#3-hispanic)
+- [4. Mixed or Other](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/AI_Total.md#4-mixed-or-other)
 
 
 # 1. Black
@@ -44,7 +44,7 @@
 
 
 
-# Asian
+# 2. Asian
 ## general
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/ethnicity/regression/AI_Total/asian_general.png" />
@@ -82,7 +82,7 @@
 
 
 
-# Hispanic
+# 3. Hispanic
 ## general
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/ethnicity/regression/AI_Total/hispanic_general.png" />
@@ -120,7 +120,7 @@
 
 
 
-# Mixed or Other
+# 4. Mixed or Other
 ## general
 <p align="center">
   <img src="https://github.com/meettyj/MSM-Discrimination-on-Twitter/raw/master/results/screenshots/ethnicity/regression/AI_Total/mixed_or_other_general.png" />
