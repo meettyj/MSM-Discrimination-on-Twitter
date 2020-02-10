@@ -72,6 +72,7 @@ merged_survey_discrimination_data$race_white[merged_survey_discrimination_data$r
 # merged_survey_discrimination_data$race_asian
 # merged_survey_discrimination_data$race_white
 
+
 # add dummy variable column for income: income_su
 merged_survey_discrimination_data$income_su
 
@@ -109,125 +110,135 @@ merged_survey_discrimination_data <- merged_survey_discrimination_data[which(mer
 merged_survey_discrimination_data$AWM_Hom_grid
 
 
+
+# seperate the merged data by ethnicity
+ethnicity_asian<-merged_survey_discrimination_data[merged_survey_discrimination_data$race_asian == 1,]
+ethnicity_black<-merged_survey_discrimination_data[merged_survey_discrimination_data$race_black == 1,]
+ethnicity_white<-merged_survey_discrimination_data[merged_survey_discrimination_data$race_white == 1,]
+ethnicity_hispanic<-merged_survey_discrimination_data[merged_survey_discrimination_data$race_hispanic == 1,]
+ethnicity_mixed_or_other<-merged_survey_discrimination_data[merged_survey_discrimination_data$race_mixed_or_other == 1,]
+
+
 # ---- asian ---- Zero Inflated Poisson ----
-ZIP_AI_Condom_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_asian)
 
 # discrimination variables
-ZIP_AI_Condom_AWM_SSSOM_Rac_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Rac_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_AWM_SSSOM_Rac_asian)
 
-ZIP_AI_Condom_AWM_SSSOM_Hom_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Hom_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_AWM_SSSOM_Hom_asian)
 
-ZIP_AI_Condom_AWM_Rac_grid_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Rac_grid_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_AWM_Rac_grid_asian)
 
-ZIP_AI_Condom_AWM_Hom_grid_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Hom_grid_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_AWM_Hom_grid_asian)
 
-ZIP_AI_Condom_AWM_Zip_Rac_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Rac_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_AWM_Zip_Rac_asian)
 
-ZIP_AI_Condom_AWM_Zip_Hom_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_asian+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Hom_asian <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=ethnicity_asian)
 summary(ZIP_AI_Condom_AWM_Zip_Hom_asian)
 
 
+
 # ---- Black ---- Zero Inflated Poisson ----
-ZIP_AI_Condom_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_black)
 
 # discrimination variables
-ZIP_AI_Condom_AWM_SSSOM_Rac_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Rac_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_AWM_SSSOM_Rac_black)
 
-ZIP_AI_Condom_AWM_SSSOM_Hom_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Hom_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_AWM_SSSOM_Hom_black)
 
-ZIP_AI_Condom_AWM_Rac_grid_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Rac_grid_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_AWM_Rac_grid_black)
 
-ZIP_AI_Condom_AWM_Hom_grid_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Hom_grid_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_AWM_Hom_grid_black)
 
-ZIP_AI_Condom_AWM_Zip_Rac_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Rac_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_AWM_Zip_Rac_black)
 
-ZIP_AI_Condom_AWM_Zip_Hom_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_black+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Hom_black <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=ethnicity_black)
 summary(ZIP_AI_Condom_AWM_Zip_Hom_black)
 
 
-
 # ---- white ---- Zero Inflated Poisson ----
-ZIP_AI_Condom_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_white)
 
 # discrimination variables
-ZIP_AI_Condom_AWM_SSSOM_Rac_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Rac_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_AWM_SSSOM_Rac_white)
 
-ZIP_AI_Condom_AWM_SSSOM_Hom_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Hom_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_AWM_SSSOM_Hom_white)
 
-ZIP_AI_Condom_AWM_Rac_grid_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Rac_grid_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_AWM_Rac_grid_white)
 
-ZIP_AI_Condom_AWM_Hom_grid_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Hom_grid_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_AWM_Hom_grid_white)
 
-ZIP_AI_Condom_AWM_Zip_Rac_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Rac_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_AWM_Zip_Rac_white)
 
-ZIP_AI_Condom_AWM_Zip_Hom_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_white+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Hom_white <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=ethnicity_white)
 summary(ZIP_AI_Condom_AWM_Zip_Hom_white)
 
 
+
 # ---- hispanic ---- Zero Inflated Poisson ----
-ZIP_AI_Condom_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_hispanic)
 
 # discrimination variables
-ZIP_AI_Condom_AWM_SSSOM_Rac_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Rac_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_AWM_SSSOM_Rac_hispanic)
 
-ZIP_AI_Condom_AWM_SSSOM_Hom_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Hom_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_AWM_SSSOM_Hom_hispanic)
 
-ZIP_AI_Condom_AWM_Rac_grid_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Rac_grid_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_AWM_Rac_grid_hispanic)
 
-ZIP_AI_Condom_AWM_Hom_grid_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Hom_grid_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_AWM_Hom_grid_hispanic)
 
-ZIP_AI_Condom_AWM_Zip_Rac_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Rac_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_AWM_Zip_Rac_hispanic)
 
-ZIP_AI_Condom_AWM_Zip_Hom_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_hispanic+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Hom_hispanic <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=ethnicity_hispanic)
 summary(ZIP_AI_Condom_AWM_Zip_Hom_hispanic)
 
 
 
 # ---- mixed_or_other ---- Zero Inflated Poisson ----
-ZIP_AI_Condom_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_mixed_or_other)
 
 # discrimination variables
-ZIP_AI_Condom_AWM_SSSOM_Rac_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Rac_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Rac, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_AWM_SSSOM_Rac_mixed_or_other)
 
-ZIP_AI_Condom_AWM_SSSOM_Hom_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_SSSOM_Hom_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_SSSOM_Hom, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_AWM_SSSOM_Hom_mixed_or_other)
 
-ZIP_AI_Condom_AWM_Rac_grid_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Rac_grid_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Rac_grid, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_AWM_Rac_grid_mixed_or_other)
 
-ZIP_AI_Condom_AWM_Hom_grid_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Hom_grid_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Hom_grid, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_AWM_Hom_grid_mixed_or_other)
 
-ZIP_AI_Condom_AWM_Zip_Rac_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Rac_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Rac, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_AWM_Zip_Rac_mixed_or_other)
 
-ZIP_AI_Condom_AWM_Zip_Hom_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+race_mixed_or_other+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=merged_survey_discrimination_data)
+ZIP_AI_Condom_AWM_Zip_Hom_mixed_or_other <- zeroinfl(AI_Condom ~ agef1y+eduf1+income_high+income_medium+AWM_Zip_Hom, dist = "poisson", data=ethnicity_mixed_or_other)
 summary(ZIP_AI_Condom_AWM_Zip_Hom_mixed_or_other)
 
 
