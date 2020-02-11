@@ -1,10 +1,11 @@
 # ZIP Ethnicity: AI_Condom
-
+  
 - [1. Black](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/ZIP_AI_Condom.md#1-black)
 - [2. White](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/ZIP_AI_Condom.md#2-white)
 - [3. Asian](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/ZIP_AI_Condom.md#3-asian)
 - [4. Hispanic](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/ZIP_AI_Condom.md#4-hispanic)
 - [5. Mixed or Other](https://github.com/meettyj/MSM-Discrimination-on-Twitter/blob/master/results/regression/ethnicity/ZIP_AI_Condom.md#5-mixed-or-other)
+
 
 
 # 1. Black
